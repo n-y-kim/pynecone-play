@@ -88,10 +88,6 @@ Component는 파이콘의 프런트 엔드를 구성하는 요소이다. 컴포�
 
 `pc.text` 컴포넌트를 통해 예시를 살펴보자.
 
-<p>
-    <div style="color:blue; font_size=1.5em">Hello World!</div>
-</p>
-
 ```python
 pc.text("Hello World!", color="blue", font_size="1.5em")
 ```
