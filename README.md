@@ -2,6 +2,22 @@
 
 Test repo for pynecone! 🌲 공식 문서 번역하면서 끄적끄적 테스트
 
+- [pynecone-play](#pynecone-play)
+  - [Getting Started](#getting-started)
+    - [Project Structure](#project-structure)
+      - [.web](#web)
+      - [assets](#assets)
+      - [Main Project](#main-project)
+      - [Config](#config)
+  - [Components](#components)
+    - [Overview](#overview)
+      - [Component Basics](#component-basics)
+      - [Another Example](#another-example)
+      - [Pages](#pages)
+    - [Props](#props)
+
+<hr>
+
 ## Getting Started
 
 ### Project Structure
@@ -68,6 +84,8 @@ config = pc.Config(
 
 환경(env)은 `pc.Env.Dev` 또는 `pc.Env.PROD` 로 설정할 수 있다. self hosting 섹션에서 추가적으로 설명한다.
 
+<hr>
+
 ## Components
 
 ### Overview
@@ -122,3 +140,30 @@ pc.hstack(
 `color` 같은 스타일링 prop들은 많은 컴포넌트들에서 이용된다.
 
 > [컴포넌트 라이브러리 페이지](https://pynecone.io/docs/library)에서 각 컴포넌트들의 props를 확인할 수 있다.
+
+#### Pages
+
+파인콘 앱들은 페이지(page)들로 구성된다. 페이지는 특정 URL 경로를 컴포넌트로 연결한다. 
+
+컴포넌트를 반환(리턴)하는 함수를 이용해 페이지를 만들 수 있다. 기본적으로 함수 이름이 경로로 사용되지만, 경로를 직접 지정할 수도 있다.
+
+```python
+def index():
+    return pc.text("Root Page")
+
+
+def about():
+    return pc.text("About Page")
+
+
+app = pc.App()
+app.add_page(index, path="/")
+app.add_page(about, path="/about")
+```
+
+이 예시에서 우리는 `index` 라는 페이지를 루트 경로에 추가했다. 만약 `dev` 모드로 앱을 실행하고 있다면, `http://localhost:8000`으로 접속하면 확인할 수 있다.
+
+유사하게 `about` 페이지는 `http://localhost:8000/about` 경로로 접속할 수 있다.
+
+### Props
+
