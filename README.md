@@ -1,22 +1,18 @@
-# pynecone-play
-
 Test repo for pynecone! 🌲 공식 문서 번역하면서 끄적끄적 테스트
 
-- [pynecone-play](#pynecone-play)
-  - [Getting Started](#getting-started)
-    - [Project Structure](#project-structure)
-      - [.web](#web)
-      - [assets](#assets)
-      - [Main Project](#main-project)
-      - [Config](#config)
-  - [Components](#components)
-    - [Overview](#overview)
-      - [Component Basics](#component-basics)
-      - [Another Example](#another-example)
-      - [Pages](#pages)
-    - [Props](#props)
-
-<hr>
+🌱 **Table of contents** 🌱
+- [Getting Started](#getting-started)
+  - [Project Structure](#project-structure)
+    - [.web](#web)
+    - [assets](#assets)
+    - [Main Project](#main-project)
+    - [Config](#config)
+- [Components](#components)
+  - [Overview](#overview)
+    - [Component Basics](#component-basics)
+    - [Another Example](#another-example)
+    - [Pages](#pages)
+  - [Props](#props)
 
 ## Getting Started
 
