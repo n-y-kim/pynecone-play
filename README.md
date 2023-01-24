@@ -24,6 +24,9 @@ Test repo for pynecone! 🌲 공식 문서 번역하면서 끄적끄적 테스�
     - [Another Example](#another-example)
     - [Pages](#pages)
   - [Props](#props)
+    - [Component Props](#component-props)
+    - [Style Props](#style-props)
+    - [Binding Props to State](#binding-props-to-state)
 
 ## Getting Started
 
@@ -348,4 +351,52 @@ app.add_page(about, path="/about")
 유사하게 `about` 페이지는 `http://localhost:8000/about` 경로로 접속할 수 있다.
 
 ### Props
+
+Props(직역: 소품)는 컴포넌트의 특성과 동작을 변경한다. Prop들은 컴포넌트 생성자 함수의 인자로 전달된다.
+
+#### Component Props
+
+각 컴포넌트들은 고유한 props를 가지고 있다. 예를 들어 `pc.avatar` 컴포넌트는 아바타 이모티콘의 이름을 설정할 수 있는 `name` prop을 가지고 있다. 
+
+코드 결과 이미지:
+
+![Avatar](/doc/img/pc.avatar.name.png)
+
+```python
+pc.avatar(
+    name="John Doe",
+)
+```
+
+공식문서를 통해 각 컴포넌트들의 props를 확인할 수 있다.
+
+> 파인콘은 더욱 빠른 시작을 위해 여러가지 [빌트인 컴포넌트들](https://pynecone.io/docs/library)을 지원하고 있다.
+
+#### Style Props
+
+특정 컴포넌트를 위한 porps 외에도 대부분의 기본 제공 컴포넌트들은 광범위한 스타일링을 위한 props를 지원한다.
+
+<코드 테스트는 [공식 홈페이지에서](https://pynecone.io/docs/components/props)>
+
+예시 스크린샷:
+
+![Button](doc/img/pc.button.png)
+
+```python
+pc.button(
+    "Fancy Button",
+    border_radius="1em",
+    box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
+    background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+    box_sizing="border-box",
+    color="white",
+    _hover={
+        "opacity": 0.85,
+    },
+)
+```
+
+더 많은 앱 커스터마이징을 위해서는 [styling docs](https://pynecone.io/docs/styling/overview)를 참고하자.
+
+#### Binding Props to State
 
